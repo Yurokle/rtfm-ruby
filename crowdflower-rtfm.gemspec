@@ -24,12 +24,13 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
+    "crowdflower-rtfm.gemspec",
     "examples/Gemfile",
     "examples/README.md",
     "examples/config.ru",
     "examples/webhook.rb",
     "examples/webhook_public.pem",
-    "rtfm.gemspec",
+    "lib/crowdflower-rtfm.rb",
     "test/helper.rb",
     "test/test_rtfm.rb"
   ]

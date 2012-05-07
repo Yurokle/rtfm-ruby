@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chris Van Pelt"]
-  s.date = "2012-05-05"
+  s.date = "2012-05-07"
   s.description = "Real Time Foto Moderator (RTFM) is Crowdsourced Image Moderation.  Keep your app clean!"
   s.email = "vanpelt@crowdflower.com"
   s.extra_rdoc_files = [

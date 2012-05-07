@@ -14,7 +14,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "rtfm"
+  gem.name = "crowdflower-rtfm"
   gem.homepage = "http://dolores.github.com/rtfm-api"
   gem.license = "MIT"
   gem.summary = %Q{Simple Ruby wrapper for the RTFM API}

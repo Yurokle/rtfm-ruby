@@ -4,8 +4,8 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "rtfm"
-  s.version = "0.0.1"
+  s.name = "crowdflower-rtfm"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chris Van Pelt"]
@@ -29,7 +29,6 @@ Gem::Specification.new do |s|
     "examples/config.ru",
     "examples/webhook.rb",
     "examples/webhook_public.pem",
-    "lib/rtfm.rb",
     "rtfm.gemspec",
     "test/helper.rb",
     "test/test_rtfm.rb"

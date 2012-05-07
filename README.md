@@ -5,12 +5,12 @@ Real Time Foto Moderator (RTFM) is Crowdsourced Image Moderation, learn more at 
 ## Usage
 
 ```shell
-gem install rtfm
+gem install crowdflower-rtfm
 ```
 
 ```ruby
 require 'rubygems'
-require 'rtfm'
+require 'crowdflower-rtfm'
 
 RTFM.api_key = "a1b2c3d4e5f6g7h8i9j0..."
 #moderate_image accepts an optional metadata hash

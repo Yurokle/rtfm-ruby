@@ -40,6 +40,5 @@ The implementation of this wrapper was inspired heavily by Stripes Ruby implemen
 
 # Copyright
 
-Copyright (c) 2012 CrowdFlower. See LICENSE.txt for
-further details.
+Copyright (c) 2012 CrowdFlower. See LICENSE.txt for further details.
 

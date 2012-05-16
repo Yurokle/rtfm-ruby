@@ -140,6 +140,17 @@ describe RTFM do
       error.to_s.must_match /bullshit/
     end
     
+    it "handles empty response on error" do
+      stub_request(:post, "https://1234:@rtfm.crowdflower.com/v1/images").to_return(
+        :status => 402, :body => ""
+      )
+      error = lambda {
+        puts RTFM.moderate_image(@url)
+      }.must_raise(RTFM::APIError)
+      error.to_s.must_match /Invalid response object/
+    end
+    
+    
     it "handles malformed request" do
       stub_request(:post, "https://1234:@rtfm.crowdflower.com/v1/images").to_return(
         :status => 422, :body => MultiJson.dump({:error => "Bad url"})

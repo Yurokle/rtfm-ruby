@@ -96,7 +96,7 @@ module RTFM
   def self.handle_api_error(rcode, rbody)
     begin
       error_obj = MultiJson.load(rbody, :symbolize_keys => true)
-      error = error_obj[:error] or raise Error.new # escape from parsing
+      error = (error_obj && error_obj[:error]) or raise Error.new # escape from parsing
     rescue MultiJson::DecodeError, Error
       raise APIError.new("Invalid response object from API: #{rbody.inspect} (HTTP response code was #{rcode})", rcode, rbody)
     end

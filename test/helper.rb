@@ -16,7 +16,7 @@ require 'webmock/minitest'
 
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-require 'rtfm'
+require 'crowdflower-rtfm'
 
 def moderate_success_body(url, metadata = {})
   MultiJson.dump(

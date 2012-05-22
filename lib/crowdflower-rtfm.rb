@@ -90,9 +90,11 @@ module RTFM
   class AuthenticationError < Error; end
   class InvalidRequestError < Error; end
   class APIConnectionError < Error; end
-  
-  def self.error(klass = Error, error, rcode, rbody, error_obj); klass.new(error, rcode, rbody, error_obj); end
-  
+
+  def self.error(klass, error, rcode, rbody, error_obj)
+    klass.new(error, rcode, rbody, error_obj)
+  end
+
   def self.handle_api_error(rcode, rbody)
     begin
       error_obj = MultiJson.load(rbody, :symbolize_keys => true)

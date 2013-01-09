@@ -23,7 +23,11 @@ module RTFM
   def self.retrieve_image(id)
     request("/images/#{id}")
   end
-  
+
+  def self.retrieve_image_by_url(url)
+    request("/images_by_url?url=#{url}")
+  end
+
   def self.request(url, method = :get, params = nil, api_key = nil, headers = {})
     api_key ||= @@api_key
     raise AuthenticationError.new("Please provide an API key (RTFM.api_key = <API-KEY>, your API key can be found by clicking \"APISettings\" @ http://crowdflower.com/rtfm)") unless api_key

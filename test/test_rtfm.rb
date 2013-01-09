@@ -31,6 +31,14 @@ describe RTFM do
       res[:image][:url].must_equal("http://vanpe.lt/fake.jpg")
       res[:image][:id].must_equal(1)
     end
+
+    it "retrieves images by url" do
+      image_url = 'http://500px.com/photo/1'
+      stub_request(:get, "https://1234:@rtfm.crowdflower.com/v1/images_by_url?url=#{image_url}").to_return(:status => 200, :body => retrieve_success_body_for_url(13, image_url))
+      res = RTFM.retrieve_image_by_url(image_url)
+      res[:image][:url].must_equal(image_url)
+      res[:image][:id].must_equal(13)
+    end
   end
   
   describe "handles network errors" do    

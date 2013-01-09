@@ -29,10 +29,14 @@ def moderate_success_body(url, metadata = {})
 end
 
 def retrieve_success_body(id)
+  retrieve_success_body_for_url(id, "http://vanpe.lt/fake.jpg")
+end
+
+def retrieve_success_body_for_url(id, url)
   MultiJson.dump(
     "image" => {
       "id" => id,
-      "url" => "http://vanpe.lt/fake.jpg",
+      "url" => url,
       "score" => 0.6,
       "rating" => "accepted",
       "state" => "completed",
@@ -40,6 +44,7 @@ def retrieve_success_body(id)
     }
   )
 end
+
 
 class MiniTest::Spec::TestCase
 end
